@@ -5,8 +5,8 @@
 
 ```bash
 docker-compose -f etc/docker/docker-compose.yml up -d 
-docker exec -ti docker_app_1 /bin/bash -c "cd app && composer update"
-docker exec -ti docker_app_1 /bin/bash -c "cd app && php bin/console cache:clear --env=prod && php bin/console cache:clear --env=dev"
+docker exec -ti docker_app_1 bash -c "cd app && composer update"
+docker exec -ti docker_app_1 bash -c "cd app && php bin/console cache:clear --env=prod && php bin/console cache:clear --env=dev"
 ```
 
 open [http://localhost:8000](http://localhost:8000)
@@ -16,7 +16,7 @@ open [http://localhost:8000](http://localhost:8000)
 ## Clear symfony cache
 
 ```bash
-docker exec -ti docker_app_1 /bin/bash -c "cd app && php bin/console cache:clear --env=prod && php bin/console cache:clear --env=dev"
+docker exec -ti docker_app_1 bash -c "cd app && php bin/console cache:clear --env=prod && php bin/console cache:clear --env=dev"
 ```
 
 -----
@@ -24,7 +24,7 @@ docker exec -ti docker_app_1 /bin/bash -c "cd app && php bin/console cache:clear
 ## Run symfony console commands
 
 ```bash
-docker exec -ti docker_app_1 /bin/bash
+docker exec -ti docker_app_1 bash
 cd app
 php bin/console *******
 ```
