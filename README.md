@@ -30,6 +30,14 @@ php bin/console *******
 ```
 
 -----
+## Run symfony/Doctrine migration command
+
+```bash
+php bin/console doctrine:migrations:migrate
+```
+
+-----
+
 
 ## See logs
 
